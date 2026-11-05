@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+langchain-core
+langchain-chroma
+langchain-community
+langchain-openai
+sentence-transformers
+chromadb
+rank-bm25
+python-dotenv
+networkx
+streamlit
+requests
