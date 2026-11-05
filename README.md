@@ -74,8 +74,6 @@ OPENROUTER_API_KEY=your_openrouter_api_key_here
 python3 -m streamlit run streamlit_app.py
 ```
 
-*The Streamlit script automatically checks if `backend/app.py` is running on port `8000` and starts the FastAPI server as a background subprocess if it's offline.*
-
 ---
 
 ## 📖 Usage Flow
