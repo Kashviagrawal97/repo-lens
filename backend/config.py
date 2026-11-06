@@ -16,17 +16,6 @@ REPOS_DIR = ROOT / "repos"           # cloned GitHub repos
 load_dotenv(ROOT / ".env")   
 
 
-# from langchain_community.llms import LlamaCpp
-
-# def get_llm():
-#     return LlamaCpp(
-#         model_path="/Users/kashviagrawal92/.cache/huggingface/hub/models--ggml-org--Qwen3-4B-GGUF/snapshots/2f3b082b1356a6123f7ed71e65aea340da25d53c/Qwen3-4B-Q4_K_M.gguf",  # Yahan apni .gguf file ka exact path daalo
-#         temperature=0.2,
-#         n_ctx=4096,      
-#         max_tokens=2048,
-#         verbose=False    
-#     )
-
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 import os
 
@@ -46,8 +35,3 @@ def get_embeddings():
  
 def get_vectorstore():
     return Chroma(persist_directory=DB_DIR, embedding_function=get_embeddings())
-# def get_vectorstore():
-#     # Ye model locally run hoga, no API limits
-#     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-#     return Chroma(persist_directory=DB_DIR, embedding_function=embeddings)
-
